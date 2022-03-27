@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    BEDUFLIX-Inicio
+{% endblock title %}
+
+
+{% block others %}
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+{% endblock others %}
+    
+
+{% block content %}
+
+    {% include "partials/navbar.html" %}
+    <header class="min-h-screen bg-black bg-opacity-75 showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat"  style="background-image: url('{% static 'background_netflix.jpg' %}');">
+        <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col">
+            <h1 class="font-semibold text-4xl md:text-5xl w-10/12 md:w-3/4 text-center">
+                Películas, programas de televisión y más ilimitados.
+            </h1>
+            <h3 class="text-xl md:text-xl py-5">
+                Mira en cualquier lugar. Cancela en cualquier momento.
+            </h3>
+            <h4 class="text-sm md:text-lg pb-3">
+                ¿Listo para ver? Ingresa tu correo electrónico para crear o reiniciar tu membresía.
+            </h4>
+
+            <div class="w-full flex justify-center">
+                <div class="flex justify-center items-center w-11/12 md:w-10/12">
+                    <input type="email" name="" id="" placeholder="Correo electrónico" class="md:py-5 py-4 px-2 placeholder-gray-500 rounded-tl-sm rounded-bl-sm outline-none  text-gray-900 bg-gray-50 block w-8/12 md:w-3/4">
+                    <a href='{% url "account_signup" %}' class='md:w-1/4'>
+                    
+                        <button class="bg-primary_red font-medium md:font-normal flex justify-center items-center py-4 px-2 md:px-4 rounded-br-sm rounded-tr-sm md:text-2xl">
+                            <span>
+                                Comenzar
+                            </span>
+                            <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+        <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10 ">
+            <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+                Disfruta en tu televisor.
+            </h2>
+            <h5 class="md:text-xl text-lg">
+                Mira en Smart TV, Playstation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.
+            </h5>
+        </div>
+        <div class='md:w-1/2 flex justify-center items-center'>
+            <img src="{% static 'tv.png' %}" class="w-8/12" alt="">
+        </div>
+    </section>
+
+    <section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+        <div class='md:w-1/2 flex justify-center items-center '>
+            <img src="{% static 'mobile-0819.jpg' %}" class="w-8/12" alt="">
+        </div>
+
+        <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+            <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+                Descarga tus programas para verlos sin conexión.
+            </h2>
+            <h5 class="md:text-xl text-lg">
+                Guarda tus favoritos fácilmente y siempre ten algo que ver.
+            </h5>
+        </div>
+        
+    </section>
+
+    <section class='flex flex-col md:flex-row items-center border-gray-900 border-b-8' style="min-height: 70vh;">
+        <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+            <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+                Crea perfiles para niños.
+            </h2>
+            <h5 class="md:text-xl text-lg">
+                Envía a los niños a aventuras con sus personajes favoritos en un espacio hecho solo para ellos, gratis con tu membresía.
+            </h5>
+        </div>
+        <div class='md:w-1/2 flex justify-center items-center'>
+            <img src="{% static 'netflix_kid.png' %}" class="w-8/12" alt="">
+        </div>
+    </section>
+    <footer class=" px-2 py-10 ">
+        <ul class="flex justify-between items-center" style="font-size: 8px;">
+            
+            <li>&copy; 2022</li>
+
+            <li>Basado y adaptado del tutorial de OtchereDev</li>
+        </ul>
+    </footer>
+
+
+{% endblock content %}
